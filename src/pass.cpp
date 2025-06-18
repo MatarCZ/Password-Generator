@@ -9,5 +9,5 @@ int main() {
     string phrase;
     cout << "Enter phrase for password generation: ";
     cin >> phrase;
-    return 0;
+    return 0; // End of the program
 }
