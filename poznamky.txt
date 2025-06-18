@@ -1,0 +1,31 @@
+mam hrozne dobrej napad na programovaci ukol pro nas dva (a taky asi az moc jednoduchej v teorii na to abychom na to museli byt dva realne xd)
+generovani skoro systematickych hesel na zaklade jednoho user-input-based slova
+priklad:
+
+user input: mrdka
+
+output: MqayRwsxDedcKrfvA11120
+a za tim jeste jedno nahodne programem vybrane znamenko
+cislo je based na jeho pocetni pozici na klavesnici (zacatek u q, konec u m) 
+a bere se prvni trojice rozdelujici prvni dve pismena slova
+tedy qay
+ale udelame to na zaklade anglicke takze si tam klidne predstav qaz jen ja ji nemam na mobilu
+a jestli nechces tak nevadi jen me to napadlo a potreboval jsem si to nekam napsat
+
+user input malym predelanej na velky nebo klidne volba jestli chce ten keyword malym nebo velkym v tom hesle pro jednodussi zapamatovani
+
+actually bych user input
+automaticky prevedl na velky pismena
+a k tomu pridal tri maly
+skrz to pocitani zeo
+aaa
+a na konci
+bychom mohli
+ze cele
+qwertyuiop = 1
+asdfghjkl = 2
+zxcvbnm = 3
+a pridat jeste tyhle cisla
+takze input MrDka
+by mel output
+MqazRwsxDedcKrfvAtgb31222
