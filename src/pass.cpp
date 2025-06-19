@@ -49,7 +49,7 @@ int main() {
 
 string userInput() {
     string phrase;
-    cout << "Enter phrase for password generation (letters only): ";
+    cout << "Enter phrase for password generation (letters only, no spaces): ";
     cin >> phrase;
 
     // Validate input and convert to uppercase
