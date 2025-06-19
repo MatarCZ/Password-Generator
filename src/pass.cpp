@@ -28,12 +28,10 @@ int main() {
         phrase.insert(i + mapIndex + 1, string(map[mapIndex / 3 % 7], 3)); // Insert characters from the map into the phrase
         mapIndex += 3;
     }
-
-    phraseSize = phrase.size(); // Update the size of the phrase after insertion
-
+    
     string indexingMap[3] = {"qwertyuiop", "asdfghjkl", "zxcvbnm"}; // Define the indexing map for character positions
 
-    for (size_t i = 0; i < phraseSize; i += 4) {
+    for (size_t i = 0; i < phrase.size(); i += 4) {
         for (size_t j = 0; j < 3; j++) {
             for (char character : indexingMap[j]) {
                 if (phrase[i] == toupper(character)) { // Check if the character matches any in the indexing map
