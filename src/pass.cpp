@@ -18,7 +18,7 @@ int main() {
         {'r', 'f', 'v'},
         {'t', 'g', 'b'},
         {'y', 'h', 'n'},
-        {'u', 'j', 'm'}
+        {'u', 'j', 'm'},
     };
 
     size_t phraseSize = phrase.size(); // Get the size of the input phrase
@@ -31,11 +31,14 @@ int main() {
 
     phraseSize = phrase.size(); // Update the size of the phrase after insertion
 
+    string indexingMap[3] = {"qwertyuiop", "asdfghjkl", "zxcvbnm"}; // Define the indexing map for character positions
+
     for (size_t i = 0; i < phraseSize; i += 4) {
-        for (size_t j = 0; j < 7; j++) {
-            for (size_t k = 0; k < 3; k++) {
-                if (phrase[i] == toupper(map[j][k])) {
-                    phrase += to_string(k + 1); // Append the row index of the character
+        for (size_t j = 0; j < 3; j++) {
+            for (char character : indexingMap[j]) {
+                if (phrase[i] == toupper(character)) { // Check if the character matches any in the indexing map
+                    phrase += to_string(j + 1); // Append the index of the character to the phrase
+                    break; // Exit the loop once a match is found
                 }
             }
         }
