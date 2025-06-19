@@ -21,6 +21,26 @@ int main() {
         {'u', 'j', 'm'}
     };
 
+    size_t phraseSize = phrase.size(); // Get the size of the input phrase
+    int mapIndex = 0; // Initialize the map index
+
+    for (size_t i = 0; i < phraseSize; i++) {
+        phrase.insert(i + mapIndex + 1, string(map[mapIndex / 3 % 7], 3)); // Insert a random character from the map
+        mapIndex += 3;
+    }
+
+    for (size_t i = 0; i < phrase.size(); i += 4) {
+        for (size_t j = 0; j < 7; j++) {
+            for (size_t k = 0; k < 3; k++) {
+                if (phrase[i] == toupper(map[j][k])) {
+                    phrase += to_string(k + 1); // Append the row index of the character
+                }
+            }
+        }
+    }
+
+    cout << "Generated password: " << phrase << endl; // Output the generated password
+
     return 0; // End of the program
 }
 
