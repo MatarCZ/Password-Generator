@@ -39,13 +39,13 @@ int main() {
         }
     }
 
-    std::ofstream file("password.txt"); // Save to current directory
+    ofstream file("password.txt"); // Save to current directory
     if (file.is_open()) {
         file << phrase; // Write the generated password to the file
         file.close();
-        std::cout << "Your password has been saved to: password.txt" << std::endl;
+        cout << "Your password has been saved to: password.txt" << std::endl;
     } else {
-        std::cerr << "Error: Could not write to file." << std::endl;
+        cerr << "Error: Could not write to file." << std::endl;
         return 1;
     }
 
