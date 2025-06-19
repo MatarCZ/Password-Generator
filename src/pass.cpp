@@ -39,21 +39,11 @@ int main() {
         }
     }
 
-    std::string downloads = get_downloads_path();
-    if (downloads.empty()) {
-        std::cerr << "Could not determine the Downloads folder path!" << std::endl;
-        return 1;
-    }
-#ifdef _WIN32
-    std::string path = downloads + "\\password.txt"; // Use backslashes for Windows paths
-#else
-    std::string path = downloads + "/password.txt"; // Use forward slashes for Linux paths
-#endif
-    std::ofstream file(path);
+    std::ofstream file("password.txt"); // Save to current directory
     if (file.is_open()) {
         file << phrase; // Write the generated password to the file
         file.close();
-        std::cout << "Your password has been saved to: " << path << std::endl;
+        std::cout << "Your password has been saved to: password.txt" << std::endl;
     } else {
         std::cerr << "Error: Could not write to file." << std::endl;
         return 1;
