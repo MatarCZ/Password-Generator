@@ -25,11 +25,13 @@ int main() {
     int mapIndex = 0; // Initialize the map index
 
     for (size_t i = 0; i < phraseSize; i++) {
-        phrase.insert(i + mapIndex + 1, string(map[mapIndex / 3 % 7], 3)); // Insert a random character from the map
+        phrase.insert(i + mapIndex + 1, string(map[mapIndex / 3 % 7], 3)); // Insert characters from the map into the phrase
         mapIndex += 3;
     }
 
-    for (size_t i = 0; i < phrase.size(); i += 4) {
+    phraseSize = phrase.size(); // Update the size of the phrase after insertion
+
+    for (size_t i = 0; i < phraseSize; i += 4) {
         for (size_t j = 0; j < 7; j++) {
             for (size_t k = 0; k < 3; k++) {
                 if (phrase[i] == toupper(map[j][k])) {

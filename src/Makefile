@@ -19,10 +19,6 @@ $(TARGET): $(SRC)
 run: $(TARGET)
 	./$(TARGET)
 
-# Rule to build the target with debug information
-debug: CXXFLAGS += -g
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
-
 # Clean up generated files
 clean:
 	rm -f $(TARGET)
