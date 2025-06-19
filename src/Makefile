@@ -3,7 +3,7 @@ CXX := g++
 CXXFLAGS := -Wall -Wextra -std=c++17
 
 # Target executable
-TARGET := PWGen
+TARGET := PWGen.exe
 
 # Source file
 SRC := pass.cpp
