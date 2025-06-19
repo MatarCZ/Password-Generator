@@ -1,5 +1,4 @@
 #include <iostream>
-#include <time.h>
 #include <string>
 
 using namespace std;
@@ -7,8 +6,7 @@ using namespace std;
 string userInput();
 
 int main() {
-    srand(time(0)); // Seed the random number generator
-    
+
     string phrase = userInput(); // Get user input for the password generation
 
     char map[7][3] = {
