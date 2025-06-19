@@ -102,7 +102,7 @@ int main() {
 
 string userInput() {
     string phrase;
-    cout << "Enter phrase for password generation (letters only, no spaces): ";
+    cout << "Enter phrase for password generation (letters only, no spaces, no diacritis): ";
     cin >> phrase;
 
     // Validate input and convert to uppercase
